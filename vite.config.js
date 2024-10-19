@@ -6,10 +6,11 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '',
-  build: {
-    outDir: 'dist'
-  },
+  base: process.env.CF_PAGES
+    ? '/'                         // For Cloudflare Pages
+    : process.env.GITHUB_ACTIONS
+      ? '/pwang-library/'         // For GitHub Pages
+      : '/',                      // For local debugging
   plugins: [
     vue(),
     vueDevTools(),
