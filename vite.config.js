@@ -9,7 +9,7 @@ export default defineConfig({
   base: process.env.CF_PAGES
     ? '/'                         // For Cloudflare Pages
     : process.env.GITHUB_ACTIONS
-      ? '/pwang-library/'         // For GitHub Pages
+      ? '/mliu-library/'         // For GitHub Pages
       : '/',                      // For local debugging
   build: {
     outDir: 'dist'
