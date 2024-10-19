@@ -3,8 +3,6 @@
     <BHeader />
   </header>
   <main class = "main-box">
-    <!-- <JSON /> -->
-    <!-- <Form /> -->
     <router-view></router-view>
   </main>
 </template>
